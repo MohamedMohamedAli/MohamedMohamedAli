@@ -14,30 +14,22 @@
 		        document.getElementById("indietro").style.display = "block";
 
 
-		        document.getElementById("nome").innerHTML = "NOME: ";
-		        document.getElementById("nomeInput").innerHTML = result.nome;
+		        document.getElementById("nome").innerHTML = "NOME: <span style=\"font-family:courier; color:darkgreen\">" + result.nome + "</span>";
 
-		        document.getElementById("cognome").innerHTML = "COGNOME: ";
-		        document.getElementById("cognomeInput").innerHTML = result.cognome;
+		        document.getElementById("cognome").innerHTML = "COGNOME: <span style=\"font-family:courier; color:darkgreen\">" + result.cognome + "</span>";
 
-		        document.getElementById("data").innerHTML = "DATA DI NASCITA: ";
-		        document.getElementById("dataInput").innerHTML = result.dataNascita;
+		        document.getElementById("data").innerHTML = "DATA DI NASCITA: <span style=\"font-family:courier; color:darkgreen\">" + result.dataNascita + "</span>";
 
-		        document.getElementById("stipendio").innerHTML = "STIPENDIO: ";
-		        document.getElementById("stipendioInput").innerHTML = result.stipendioRAL;
+		        document.getElementById("stipendio").innerHTML = "STIPENDIO: <span style=\"font-family:courier; color:darkgreen\">" + result.stipendioRAL + "</span>";
 		        if (result.settore != null) {
-		            document.getElementById("settore").innerHTML = "SETTORE: ";
-		            document.getElementById("settoreInput").innerHTML = result.settore.descrizione;
+		            document.getElementById("settore").innerHTML = "SETTORE: <span style=\"font-family:courier; color:darkgreen\">" + result.settore.descrizione + "</span>";
 		        }
 		        if (result.residenza != null) {
-		            document.getElementById("regione").innerHTML = "REGIONE: ";
-		            document.getElementById("regioneInput").innerHTML = result.residenza.regione.descrizione;
+		            document.getElementById("regione").innerHTML = "REGIONE: <span style=\"font-family:courier; color:darkgreen\">" + result.residenza.regione.descrizione + "</span>";
 
-		            document.getElementById("provincia").innerHTML = "PROVINCIA: ";
-		            document.getElementById("provinciaInput").innerHTML = result.residenza.provincia.descrizione;
+		            document.getElementById("provincia").innerHTML = "PROVINCIA: <span style=\"font-family:courier; color:darkgreen\">" + result.residenza.provincia.descrizione + "</span>";
 
-		            document.getElementById("comune").innerHTML = "COMUNE: ";
-		            document.getElementById("comuneInput").innerHTML = result.residenza.comune.descrizione;
+		            document.getElementById("comune").innerHTML = "COMUNE: <span style=\"font-family:courier; color:darkgreen\">" + result.residenza.comune.descrizione + "</span>";
 		        }
 		    } else {
 		        caricamentoCambioPagina(true, 250);
@@ -47,28 +39,20 @@
 		            document.getElementById("indietro").style.display = "none";
 
 		            document.getElementById("nome").innerHTML = "";
-		            document.getElementById("nomeInput").innerHTML = "";
 
 		            document.getElementById("cognome").innerHTML = "";
-		            document.getElementById("cognomeInput").innerHTML = "";
 
 		            document.getElementById("data").innerHTML = "";
-		            document.getElementById("dataInput").innerHTML = "";
 
 		            document.getElementById("stipendio").innerHTML = "";
-		            document.getElementById("stipendioInput").innerHTML = "";
 
 		            document.getElementById("settore").innerHTML = "";
-		            document.getElementById("settoreInput").innerHTML = "";
 
 		            document.getElementById("regione").innerHTML = "";
-		            document.getElementById("regioneInput").innerHTML = "";
 
 		            document.getElementById("provincia").innerHTML = "";
-		            document.getElementById("provinciaInput").innerHTML = "";
 
 		            document.getElementById("comune").innerHTML = "";
-		            document.getElementById("comuneInput").innerHTML = "";
 		        }, 250);
 
 		    }
