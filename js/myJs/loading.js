@@ -16,12 +16,12 @@ function caricamento(id, testo, attiva, gif) {
 ! function(d) {
     d.fakeLoader = function(i) {
         var s = d.extend({
-                    targetClass: "fakeLoader",
-                    bgColor: "#3498db",
-                    spinner: "spinner3"
-                },
-                i),
-            e = d("body").find("." + s.targetClass);
+                targetClass: "fakeLoader",
+                bgColor: "#3498db",
+                spinner: "spinner3"
+            },
+            i);
+        e = d("body").find("." + s.targetClass);
         e.each(function() {
                 e.html('<div class="fl fl-spinner spinner3"><div class="dot1"></div><div class="dot2"></div></div>');
             }),
@@ -31,7 +31,6 @@ function caricamento(id, testo, attiva, gif) {
 
 $(document).ready(function() {
     $("#fakeLoader").addClass("fakeLoader");
-    $("#fakeLoader").hide();
     $.fakeLoader({
         bgColor: "#3498db",
         spinner: "spinner3"
