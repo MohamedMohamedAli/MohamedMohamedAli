@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+    <script src="js/myJs/header.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Inserisci</title>
+
+</head>
+
+<body>
+    <div id="fakeLoader"></div>
+    <div class="container">
+        <h1 style="color:darkblue">Inserisci Nuova Risorsa:</h1>
+        <form class="form-horizontal" id="datiID">
+            <h3 id="esito" style="color:green"></h3>
+            <h3 id="errore" style="color:red"></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomeId">Nome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="nomeId" name="nome" oninput="esitoNo()">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="cognomeId">Cognome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="cognomeId" name="Cognome" oninput="esitoNo()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="dataId">Data Di Nascita:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="date" id="dataId" name="data" oninput="esitoNo()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="stipendioId">Stipendio:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="number" id="stipendioId" name="stipendio" oninput="esitoNo()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="settoreId">Settori:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="settoreId">
+					<option value="">--seleziona--</option>
+					</select>
+                </div>
+            </div>
+
+
+            <label class="control-label col-sm-2" id="testoRegione">Regione:</label>
+            <label class="control-label col-sm-2" id="testoProvincia" style="left:90px;">Provincia:</label>
+            <label class="control-label col-sm-2" id="testoComune" style="left:180px;">Comune:</label>
+
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="regioneId" onchange="prendiRegione()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="provinciaId" disabled onchange="prendiProvincia()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="comuneId" disabled onchange="prendiComune()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary btn-md" id="invia">
+						<span id="testoButton" >Conferma</span>
+					</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="js/myJs/insert.js"></script>
+
+</body>
+
+</html>

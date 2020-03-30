@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <script src="js/myJs/header.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Riscerca</title>
+</head>
+
+<body>
+    <div id="fakeLoader"></div>
+    <div class="container">
+        <h1 id="titolo" style="color:darkblue">Ricerca Risorsa:</h1>
+        <form class="form-horizontal" id="datiID">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomeId">Nome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="nomeId" name="nome" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="cognomeId">Cognome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="cognomeId" name="cognome">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="codiceSettoreId">Settori:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="codiceSettoreId">
+					<option value="">--seleziona--</option>
+					</select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary btn-md" id="invia">
+						<span id="testoButton" >Avvia Ricerca</span>
+					</button>
+                </div>
+            </div>
+
+        </form>
+
+        <table class="table table-striped" id="tabella">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Settore</th>
+                    <th>Stipendio</th>
+                    <th>Residenza</th>
+                </tr>
+            </thead>
+        </table>
+
+        <input id="indietro" type="button" class="btn btn-primary btn-md" value="Torna Alla Ricerca" />
+        <script src="js/myJs/cerca.js"></script>
+    </div>
+</body>
+
+</html>

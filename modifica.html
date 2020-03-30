@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+    <script src="js/myJs/header.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Modifica</title>
+
+</head>
+
+<body>
+    <div id="fakeLoader"></div>
+    <div class="container">
+        <h1 style="color:darkblue">Modifica Risorsa:</h1>
+        <form class="form-horizontal" id="datiID">
+
+            <h3 id="esito" style="color:green"></h3>
+            <h3 id="errore" style="color:red"></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="id">ID:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="id" name="idInput" oninput="esitoNo()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary btn-md" id="carica">
+						<span id="testoButton" >Modifica</span>
+					</button>
+                </div>
+            </div>
+        </form>
+
+
+        <form class="form-horizontal" id="datiModifica">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="nomeId">Nome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="nomeId" name="nome">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="cognomeId">Cognome:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="cognomeId" name="Cognome">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="dataId">Data Di Nascita:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="date" id="dataId" name="data">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="stipendioId">Stipendio:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="number" id="stipendioId" name="stipendio">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="settoreId">Settori:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="settoreId">
+					</select>
+                </div>
+            </div>
+
+
+            <label class="control-label col-sm-2" id="testoRegione">Regione:</label>
+            <label class="control-label col-sm-2" id="testoProvincia" style="left:90px;">Provincia:</label>
+            <label class="control-label col-sm-2" id="testoComune" style="left:180px;">Comune:</label>
+
+            <div class="form-inline">
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="regioneId" onchange="prendiRegione()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="provinciaId" disabled onchange="prendiProvincia()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <select class="form-control" id="comuneId" disabled onchange="prendiComune()" style="width:250px;">
+					<option value="">--seleziona--</option>
+					</select>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary btn-md" id="invia">
+						<span id="testoButtonInvia" >Conferma</span>
+					</button>
+                    <input id="indietroId" type="button" class="btn btn-primary btn-md" value="Indietro" onclick="svuota()" />
+                </div>
+            </div>
+
+
+        </form>
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/myJs/modifica.js"></script>
+</body>
+
+</html>

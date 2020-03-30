@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+    <script src="js/myJs/header.js"></script>
+    <script>
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Dettaglio</title>
+
+</head>
+
+<body>
+    <div id="fakeLoader"></div>
+    <div class="container">
+        <h1 id="titolo" style="color:darkblue">Dettaglio Risorsa:</h1>
+        <form class="form-horizontal" id="datiID">
+            <h3 id="esito" style="color:red"></h3>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="id">ID:</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" id="id" name="idInput" value="" oninput="esitoNo()">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary btn-md" id="invia">
+						<span id="testoButton" >Dettaglio</span>
+					</button>
+                </div>
+            </div>
+
+        </form>
+
+        <h3 id="nome" style="font-family:verdana; float:left;"></h3>
+        <h3 id="nomeInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="cognome" style="font-family:verdana; float:left;"></h3>
+        <h3 id="cognomeInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="data" style="font-family:verdana; float:left;"></h3>
+        <h3 id="dataInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="stipendio" style="font-family:verdana; float:left;"></h3>
+        <h3 id="stipendioInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="settore" style="font-family:verdana; float:left;"></h3>
+        <h3 id="settoreInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="regione" style="font-family:verdana; float:left;"></h3>
+        <h3 id="regioneInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="provincia" style="font-family:verdana; float:left;"></h3>
+        <h3 id="provinciaInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <h3 id="comune" style="font-family:verdana; float:left;"></h3>
+        <h3 id="comuneInput" style="font-family:courier; color:darkgreen"></h3>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input id="indietro" type="button" class="btn btn-primary btn-md" value="Trona Indietro" onclick="mostraDati(false)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/myJs/dettaglio.js"></script>
+</body>
+
+</html>
